@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MinhaClasse",
+            "request": "launch",
+            "mainClass": "edu.carlos.primeirasemana.MinhaClasse",
+            "projectName": "java-anatomia-classes_52fce393"
+        }
+    ]
+}
