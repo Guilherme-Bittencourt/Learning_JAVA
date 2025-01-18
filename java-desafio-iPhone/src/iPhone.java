@@ -1,64 +1,71 @@
-// Classe iPhone que implementa todas as interfaces
+// Classe iPhone que implementa as interfaces
 public class iPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
 
     // Implementações da interface ReprodutorMusical
     @Override
-    public void tocarMusica() {
-        System.out.println("Tocando música...");
+    public void tocar() {
+        System.out.println("Iniciando a música...");
     }
 
     @Override
-    public void pausarMusica() {
+    public void pausar() {
         System.out.println("Música pausada.");
     }
 
     @Override
-    public void pararMusica() {
-        System.out.println("Música parada.");
-    }
-
-    @Override
-    public void avancarMusica() {
-        System.out.println("Avançando para a próxima música.");
+    public void selecionarMusica() {
+        System.out.println("Selecionando uma nova música...");
     }
 
     // Implementações da interface AparelhoTelefonico
     @Override
-    public void fazerChamada(String numero) {
-        System.out.println("Ligando para " + numero);
+    public void ligar(String numero) {
+        System.out.println("Ligando para o número: " + numero);
     }
 
     @Override
-    public void atenderChamada() {
-        System.out.println("Atendendo a chamada.");
+    public void atender() {
+        System.out.println("Atendendo a chamada...");
     }
 
     @Override
-    public void encerrarChamada() {
-        System.out.println("Chamada encerrada.");
+    public void iniciarCorreioVoz() {
+        System.out.println("Iniciando o correio de voz...");
     }
 
     // Implementações da interface NavegadorInternet
     @Override
-    public void abrirPaginaWeb(String url) {
-        System.out.println("Abrindo página: " + url);
+    public void exibirPagina(String url) {
+        System.out.println("Exibindo página: " + url);
     }
 
     @Override
-    public void fecharPaginaWeb() {
-        System.out.println("Fechando página.");
+    public void adicionarNovaAba() {
+        System.out.println("Abrindo uma nova aba...");
     }
 
     @Override
-    public void navegarPara(String url) {
-        System.out.println("Navegando para: " + url);
+    public void atualizarPagina() {
+        System.out.println("Atualizando a página...");
     }
 
     // Método main para testar a implementação
     public static void main(String[] args) {
         iPhone iphone = new iPhone();
-        iphone.tocarMusica(); // Teste do reprodutor musical
-        iphone.fazerChamada("123-456-789"); // Teste do aparelho telefônico
-        iphone.abrirPaginaWeb("www.exemplo.com"); // Teste do navegador de internet
+        
+        // Testando o reprodutor musical
+        iphone.tocar(); 
+        iphone.pausar();
+        iphone.selecionarMusica();
+
+        // Testando o aparelho telefônico
+        iphone.ligar("123-456-789"); 
+        iphone.atender();
+        iphone.iniciarCorreioVoz();
+
+        // Testando o navegador de internet
+        iphone.exibirPagina("www.exemplo.com");
+        iphone.adicionarNovaAba();
+        iphone.atualizarPagina();
     }
 }

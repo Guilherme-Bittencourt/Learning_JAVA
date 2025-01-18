@@ -1,6 +1,6 @@
 // Interface NavegadorInternet
 public interface NavegadorInternet {
-    void abrirPaginaWeb(String url);
-    void fecharPaginaWeb();
-    void navegarPara(String url);
+    void exibirPagina(String url); // Exibe a página na web
+    void adicionarNovaAba(); // Adiciona uma nova aba
+    void atualizarPagina(); // Atualiza a página
 }

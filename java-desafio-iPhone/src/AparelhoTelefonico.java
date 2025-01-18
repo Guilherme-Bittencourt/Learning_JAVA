@@ -1,6 +1,6 @@
 // Interface AparelhoTelefonico
 public interface AparelhoTelefonico {
-    void fazerChamada(String numero);
-    void atenderChamada();
-    void encerrarChamada();
+    void ligar(String numero);  // Faz uma ligação
+    void atender(); // Atende uma chamada
+    void iniciarCorreioVoz(); // Inicia o correio de voz
 }
