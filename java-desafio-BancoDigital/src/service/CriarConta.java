@@ -3,7 +3,7 @@ package service;
 import model.InfoClientes;
 import java.util.Scanner;
 
-public class ContaService {
+public class CriarConta {
 
     public static InfoClientes criarConta(Scanner scan) {
         InfoClientes cliente = new InfoClientes();
