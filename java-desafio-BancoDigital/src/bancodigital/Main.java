@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Criar novos clientes
-        InfoClientes[] novosClientes = new InfoClientes[2]; // Array para armazenar os clientes
+
+        InfoClientes[] novosClientes = new InfoClientes[2];
 
         int opcao;
         do {
@@ -21,16 +21,16 @@ public class Main {
             System.out.println("Digite 2 para realizar transações bancárias (saque, depósito, transferência).");
             System.out.println("Digite 0 para sair.");
             opcao = scan.nextInt();
-            scan.nextLine(); // Para consumir a linha em branco deixada pelo nextInt()
+            scan.nextLine();
 
             switch (opcao) {
                 case 1:
-                    // Criar novas contas
-                    for (int clientes = 0; clientes < 2; clientes++) {
-                        novosClientes[clientes] = CriarConta.criarConta(scan);
-                        System.out.println("Cliente Cadastrado: " + novosClientes[clientes].getNome());
-                        if (clientes == (2 - 1)) {
-                            System.out.println("Limite de contas atingido.");
+                    // Cria apenas uma conta de cada vez
+                    for (int i = 0; i < novosClientes.length; i++) {
+                        if (novosClientes[i] == null) {
+                            novosClientes[i] = CriarConta.criarConta(scan);
+                            System.out.println("Cliente Cadastrado: " + novosClientes[i].getNome());
+                            break;  // Sai do loop após criar a primeira conta disponível
                         }
                     }
                     break;
@@ -49,7 +49,7 @@ public class Main {
                     break;
             }
 
-        } while (opcao != 0); // O loop continua até o usuário escolher sair (opção 0)
+        } while (opcao != 0);
 
         scan.close();
     }

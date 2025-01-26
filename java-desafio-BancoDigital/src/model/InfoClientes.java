@@ -49,7 +49,7 @@ public class InfoClientes {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
+    // Saque
     public boolean sacar(double valor) {
         if (valor > 0 && valor <= saldo) {
             saldo -= valor;
@@ -61,7 +61,7 @@ public class InfoClientes {
         }
     }
 
-    // Método para realizar depósito
+    // Depósito 
     public void depositar(double valor) {
         if (valor > 0) {
             saldo += valor;
@@ -71,6 +71,7 @@ public class InfoClientes {
         }
     }
 
+    // Transferência 
     public boolean transferir(InfoClientes[] clientes, double valor, Scanner scan) {
         System.out.println("Digite o número da Agência de destino:");
         String agenciaDestino = scan.nextLine();
@@ -79,7 +80,7 @@ public class InfoClientes {
         scan.nextLine();
 
         InfoClientes contaDestinoCliente = null;
-        // Encontrar a conta de destino
+        
         for (InfoClientes cliente : clientes) {
             if (cliente.getAgencia().equals(agenciaDestino) && cliente.getConta() == contaDestino) {
                 contaDestinoCliente = cliente;
@@ -87,7 +88,7 @@ public class InfoClientes {
             }
         }
 
-        // Verificando se a conta de destino foi encontrada
+
         if (contaDestinoCliente != null) {
             if (valor > 0 && saldo >= valor) {
                 saldo -= valor;

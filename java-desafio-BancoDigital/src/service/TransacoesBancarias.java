@@ -50,7 +50,7 @@ public class TransacoesBancarias {
                         System.out.println("Opção inválida.");
                         break;
                 }
-                break; // Encerra o loop, pois o cliente foi encontrado
+                break;
             }
         }
 
