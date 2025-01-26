@@ -1,18 +1,16 @@
-## Getting Started
+# Simulação de Banco Digital
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto simples de simulação de banco digital desenvolvido em Java. O objetivo é praticar a lógica de programação e aprender a implementar funcionalidades bancárias como saque, depósito, transferência e um menu interativo para navegação. O código funciona no terminal e é uma boa maneira de reforçar conceitos fundamentais.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+- **Criar nova conta bancária** com nome, idade, número da conta, agência e saldo inicial.
+- **Realizar saque**: Permite sacar um valor da conta, verificando se o saldo é suficiente.
+- **Fazer depósito**: Permite adicionar um valor ao saldo da conta.
+- **Efetuar transferência**: Transfere valores entre contas bancárias diferentes.
+- **Menu interativo**: O usuário pode escolher entre as opções de criar conta, realizar transações ou sair do sistema.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Tecnologias Utilizadas
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **Java 8 ou superior**
+- **Scanner** (para interação com o usuário no terminal)
